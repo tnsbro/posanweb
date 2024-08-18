@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.rounded-box {
+  max-width: 100%;
+  background-color: #58ff5d;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  white-space: pre-line; /* 기본적으로 줄바꿈 허용 */
+  overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+}
+
+#contents img {
+  max-width: 100%; 
+    height: auto; 
+}
+
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 검은색 배경에 투명도를 조절합니다 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 모달 내용 스타일 */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 40%; /* 최대 너비를 80%로 제한합니다 */
+}
+
+
+/* 모달 닫기 버튼 스타일 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* 화면 너비가 500px 이상일 때 줄바꿈 없애기 */
+@media (min-width: 992px) {
+  .rounded-box {
+    white-space: nowrap; /* 줄바꿈 허용하지 않음 */
+    overflow-wrap: normal; /* 기본 단어 줄바꿈 */
+  }
+}
+
+
+input,div {
+  box-sizing: border-box;
+}
+.form-box {
+  background : white;
+  padding : 25px;
+  margin: 20px;
+  border-radius: 8px;
+}
+.form-box input {
+  padding : 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.form-box button {
+  padding: 10px;
+  border : none;
+  background : lightgrey;
+  border-radius: 5px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
