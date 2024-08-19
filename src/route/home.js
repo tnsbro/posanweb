@@ -18,10 +18,10 @@ function Home() {
             <Container>
                 <div>
                     <br />
-                    <InputGroup className="mb-3">
+                    {/* <InputGroup className="mb-3">
                         <Form.Control placeholder='게시물 및 사용자 검색' />
                         <InputGroup.Text onClick={() => console.log(1)}>🔍︎</InputGroup.Text>
-                    </InputGroup>
+                    </InputGroup> */}
                 </div>
                 {/* Stack the columns on mobile by making one full-width and the other half-width */}
                 <Row>
@@ -38,6 +38,8 @@ function Home() {
                 <Row>
                     <Col xs={6}>
                         <div onClick={()=>{navigate('/booking')}}>
+                            <b>자습실 예약하러 가기</b>
+                            <br/><br/>
                             <img src={`${process.env.PUBLIC_URL}/schoolmap.png`} className='img-fluid' alt='logo'/>
                             <a style={{'fontSize' : '10px'}}>※ 상기 이미지는 예시입니다. 자세한 내용은 클릭하여 확인하세요.</a>
                         </div>

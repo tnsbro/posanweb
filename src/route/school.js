@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { selectclass, registerModal } from '../store';
 import axios from 'axios';
 import Register from './register';
+import './../App.css'
 
 
 function SchoolMap() {
@@ -48,14 +49,14 @@ function SchoolMap() {
                             <option value='1자'>1자</option>
                             <option value='2자'>2자</option>
                             <option value='저녁시간'>저녁시간</option>
-                        </select>
-                        <button onClick={() => { dispatch(selectclass(['', '자율관 1층'])) }}>자율관 1층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '자율관 2층'])) }}>자율관 2층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '자율관 3층'])) }}>자율관 3층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '자율관 4층'])) }}>자율관 4층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '본관 1층'])) }}>본관 1층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '본관 2층'])) }}>본관 2층</button>
-                        <button onClick={() => { dispatch(selectclass(['', '본관 3층'])) }}>본관 3층</button>
+                        </select> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '자율관 1층'])) }}>자율관 1층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '자율관 2층'])) }}>자율관 2층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '자율관 3층'])) }}>자율관 3층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '자율관 4층'])) }}>자율관 4층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '본관 1층'])) }}>본관 1층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '본관 2층'])) }}>본관 2층</button> 
+                        <button className='edit-btn' onClick={() => { dispatch(selectclass(['', '본관 3층'])) }}>본관 3층</button> 
                         <br /><br /><br /><br />
                         {a[1] == '자율관 1층' && <Free1 possible={possible} />}
                         {a[1] == '자율관 2층' && <Free2 possible={possible} />}

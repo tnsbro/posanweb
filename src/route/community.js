@@ -40,7 +40,7 @@ function Community() {
   return (
     <Container>
       <br />
-      <h4 onClick={() => navigate('/community')}>커뮤니티</h4>
+      <h4 style={{'cursor':'pointer'}} onClick={() => navigate('/community')}>커뮤니티</h4>
       <br />
 
       <ListGroup as="ol">
@@ -58,7 +58,7 @@ function Community() {
         currentUrl ?
           <div style={{ textAlign: 'left' }} >
             <br/><br/>
-            <Pagination>
+            {/* <Pagination>
               <Pagination.First />
               <Pagination.Prev />
               <Pagination.Item>{1}</Pagination.Item>
@@ -74,7 +74,7 @@ function Community() {
               <Pagination.Item>{20}</Pagination.Item>
               <Pagination.Next />
               <Pagination.Last />
-            </Pagination>
+            </Pagination> */}
             <Button variant='secondary' onClick={()=>{navigate('/communitywrite')}} >글 작성</Button>
           </div> : null
       }

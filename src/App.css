@@ -2,6 +2,93 @@
   text-align: center;
 }
 
+.del-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: #9ea0a3;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.edit-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  background-color: #0073e6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.comment-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.comment-textarea {
+  flex-grow: 1;
+  min-height: 24px;
+  max-height: 200px;
+  resize: none;
+  overflow: hidden;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: background-color 0.2s, min-height 0.2s;
+  margin-right: 10px;
+}
+
+.comment-textarea:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.comment-submit-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  background-color: #0073e6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.comment-submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.comment-submit-btn:hover:enabled {
+  background-color: #005bb5;
+}
+
+
 .rounded-box {
   max-width: 100%;
   background-color: #58ff5d;

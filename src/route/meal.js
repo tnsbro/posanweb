@@ -49,6 +49,7 @@ function Meals() {
                     {
                         Object.keys(data).map((key, i) => {
                             let date = key.substring(4, 6) + '월 ' + key.substring(6) + "일";
+                            console.log(data)
                             return (
                                 <div className="date" key={i}>
                                     {
@@ -98,7 +99,7 @@ function Meals() {
                 <>
                     <br />
                     <div>
-                        <h4 onClick={() => { navigate('/meal') }}>오늘의 급식</h4>
+                        <h4 onClick={() => { navigate('/meal') }} style={{'cursor':'pointer'}}>오늘의 급식</h4>
                         <a>오늘의 급식이 없습니다.</a>
                         <br />
                         <a href='/meal'>이번달 급식 확인하기</a>
@@ -111,7 +112,7 @@ function Meals() {
                 <>
                     <br />
                     <div>
-                        <h4 onClick={() => { navigate('/meal') }}>오늘의 {type}</h4>
+                        <h4 style={{'cursor':'pointer'}} onClick={() => { navigate('/meal') }}>오늘의 {type}</h4>
                         <br />
                         {
                             mealdata[type].map((item, i) => {
