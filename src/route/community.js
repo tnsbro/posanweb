@@ -40,7 +40,7 @@ function Community() {
   return (
     <Container>
       <br />
-      <h4 style={{'cursor':'pointer'}} onClick={() => navigate('/community')}>커뮤니티</h4>
+      <h4 style={{'cursor':'pointer'}} onClick={() => navigate('/community')}><b>커뮤니티</b></h4>
       <br />
 
       <ListGroup as="ol">

@@ -23,6 +23,7 @@ import CommunityWrite from './route/communitywrite.js';
 import View from './route/view.js';
 import TSignup from './route/tsignup.js';
 import MoningSong from './route/moningsong.js';
+import Catmap from './route/catmap.js';
 
 function App() {
 

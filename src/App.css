@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.rounded-outline-box {
+  width: 270px;
+  background-color: transparent; /* 배경색을 투명하게 설정 */
+  border: 2px solid #e2e2e2; /* 초록색 테두리 */
+  border-radius: 10px; /* 모서리의 둥글기 정도 */
+  margin: 20px; /* 여백 추가 */
+}
 .del-btn {
   padding: 8px 16px;
   font-size: 14px;
@@ -89,16 +96,6 @@
 }
 
 
-.rounded-box {
-  max-width: 100%;
-  background-color: #58ff5d;
-  border-radius: 20px;
-  padding: 20px;
-  font-size: 18px;
-  text-align: center;
-  white-space: pre-line; /* 기본적으로 줄바꿈 허용 */
-  overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
-}
 
 #contents img {
   max-width: 100%; 

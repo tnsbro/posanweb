@@ -2,6 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import './../App.css'
 
 function Meals() {
 
@@ -49,27 +52,48 @@ function Meals() {
                     {
                         Object.keys(data).map((key, i) => {
                             let date = key.substring(4, 6) + '월 ' + key.substring(6) + "일";
-                            console.log(data)
-                            return (
-                                <div className="date" key={i}>
-                                    {
-                                        Object.keys(data[key]).map((type, index) => (
-                                            <div key={index}>
-                                                <h4>{date} {type}</h4>
-                                                {
-                                                    data[key][type].map((item) => (
-                                                        <>
-                                                            {item}
-                                                            <br />
-                                                        </>
-                                                    ))
-                                                }
-                                                <br />
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            );
+                            let nowMealkind = Object.keys(data[key]).length;
+                            let mealkind = [];
+                            if (nowMealkind > 0) {
+                                if (nowMealkind == 3) {
+                                    mealkind = ['조식', '중식', ' 석식'];
+                                } else if (nowMealkind == 2) {
+                                    mealkind = ['조식', '중식'];
+                                } else {
+                                    mealkind = ['조식']
+                                }
+                                console.log(data[key]['조식'])
+
+                                return (
+                                    <Row>
+                                        {
+                                            mealkind.map((k) => {
+                                                return (
+                                                    <div className="rounded-outline-box" >
+                                                        {typeof data[key][k]}
+                                                        {/* {
+                                                            data[key][k].map((item) => {
+                                                                return (
+                                                                    <>
+                                                                    {k}
+                                                                    <br/>
+                                                                    </>
+                                                                )
+                                                            })
+                                                        } */}
+                                                    </div>
+                                                )
+
+                                            })
+                                        }
+                                    </Row>
+                                );
+
+                            } else {
+                                return (
+                                    null
+                                )
+                            }
                         })
                     }
                 </Container>
@@ -87,7 +111,7 @@ function Meals() {
         let type = '';
         if (hour <= 9) {
             type = '조식';
-        } else if (hour <= 14) {
+        } else if (hour <= 12) {
             type = '중식';
         } else {
             type = '석식';
@@ -99,7 +123,7 @@ function Meals() {
                 <>
                     <br />
                     <div>
-                        <h4 onClick={() => { navigate('/meal') }} style={{'cursor':'pointer'}}>오늘의 급식</h4>
+                        <h4 onClick={() => { navigate('/meal') }} style={{ 'cursor': 'pointer' }}><b>오늘의 급식</b></h4>
                         <a>오늘의 급식이 없습니다.</a>
                         <br />
                         <a href='/meal'>이번달 급식 확인하기</a>
@@ -112,7 +136,7 @@ function Meals() {
                 <>
                     <br />
                     <div>
-                        <h4 style={{'cursor':'pointer'}} onClick={() => { navigate('/meal') }}>오늘의 {type}</h4>
+                        <h4 style={{ 'cursor': 'pointer' }} onClick={() => { navigate('/meal') }}><b>오늘의 {type}</b></h4>
                         <br />
                         {
                             mealdata[type].map((item, i) => {
