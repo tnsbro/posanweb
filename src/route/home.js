@@ -7,7 +7,6 @@ import Meals from "./meal";
 import Community from "./community";
 import SchoolMap from "./school";
 import { Navigate, useNavigate } from "react-router-dom";
-import Catmap from "./catmap";
 
 
 function Home() {
@@ -37,20 +36,16 @@ function Home() {
 
                 {/* Columns are always 50% wide, on mobile and desktop */}
                 <Row>
-                    <Col xs={10} md={6}>
+                    <Col xs={6}>
                         <div onClick={()=>{navigate('/booking')}}>
-                            <br/><br/>
                             <b>자습실 예약하러 가기</b>
                             <br/><br/>
                             <img src={`${process.env.PUBLIC_URL}/schoolmap.png`} className='img-fluid' alt='logo'/>
                             <a style={{'fontSize' : '10px'}}>※ 상기 이미지는 예시입니다. 자세한 내용은 클릭하여 확인하세요.</a>
                         </div>
                     </Col>
-                    <Col xs={8} md={6}>
-                        <br/><br/>
-                        <b>포냥이 현재 위치 파악하기</b>
-                        <br/><br/>
-                        <Catmap/>
+                    <Col xs={6}>
+                        딴거
                     </Col>
                 </Row>
             </Container>
